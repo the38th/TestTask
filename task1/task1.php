@@ -3,9 +3,9 @@
     if (array_key_exists("id", $categories) && ($categories["id"] == $id)) {
         return $categories["title"];
     }
-    foreach ($categories as $key => $value) {
-      if (is_array($value)) {
-          return searchId($value, $id);
+    foreach ($categories as $category) {
+      if (is_array($category)) {
+          return searchId($category, $id);
       }
     }
     return "";
